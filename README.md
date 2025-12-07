@@ -83,16 +83,24 @@ A tabela final pronta para ser consumida por ferramentas de BI (Power BI/Metabas
 
 ## 📂 Estrutura do Repositório
 
+<div style="font-size: 20px;">
+
+📂 Estrutura do Repositório  
+<pre>
 boticario_data_ops/
 ├── dags/
-│   ├── transformacao_dbt/        # Projeto dbt isolado
-│   │   ├── models/               # Regras de negócio (SQL)
+│   ├── transformacao_dbt/
+│   │   ├── models/
 │   │   └── dbt_project.yml
-│   └── pipeline_ingestao.py      # DAG principal do Airflow
-├── data/                         # Persistência local do MinIO
-├── Dockerfile                    # Customização da imagem do Airflow
-├── docker-compose.yaml           # Orquestração dos containers
+│   └── pipeline_ingestao.py
+├── data/
+├── Dockerfile
+├── docker-compose.yaml
 └── README.md
+</pre>
+
+</div>
+
 
 ## 🚀 Como Executar
 Pré-requisitos: Docker e Docker Compose instalados.
