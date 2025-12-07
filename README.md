@@ -22,25 +22,26 @@ O pipeline resolve o problema de **descentralização de dados**, ingerindo tran
 
 A solução segue a arquitetura de **Medalhão (Bronze, Silver, Gold)**, garantindo rastreabilidade e qualidade do dado.
 
-```mermaid
 graph LR
-    subgraph Ingestão
-    A[Gerador de Vendas<br/>(Python Script)] -->|Raw CSV| B{MinIO<br/>(Data Lake)}
+
+    subgraph Ingestao
+        A["Gerador de Vendas\n(Python Script)"] -->|Raw CSV| B["MinIO\n(Data Lake)"]
     end
-    
+
     subgraph Warehousing
-    B -->|Copy| C[(PostgreSQL<br/>Camada Bronze)]
+        B -->|Copy| C["PostgreSQL\nCamada Bronze"]
     end
-    
-    subgraph Transformação
-    C -->|dbt run| D[dbt Core]
-    D -->|SQL + Testes| E[(PostgreSQL<br/>Camada Gold)]
+
+    subgraph Transformacao
+        C -->|dbt run| D["dbt Core"]
+        D -->|SQL + Testes| E["PostgreSQL\nCamada Gold"]
     end
 
     style A fill:#f9f,stroke:#333
     style B fill:#add8e6,stroke:#333
     style D fill:#ff4500,color:white,stroke:#333
     style E fill:#90ee90,stroke:#333
+
 
 🛠️ Decisões Técnicas (Tech Stack)
 
