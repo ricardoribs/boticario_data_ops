@@ -1,0 +1,34 @@
+[2025-12-07T19:24:58.429+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-07T19:24:58.524+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_pipeline_boticario_final.transformacao_dbt manual__2025-12-07T19:24:32.127207+00:00 [queued]>
+[2025-12-07T19:24:58.550+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_pipeline_boticario_final.transformacao_dbt manual__2025-12-07T19:24:32.127207+00:00 [queued]>
+[2025-12-07T19:24:58.553+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-07T19:24:58.588+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): transformacao_dbt> on 2025-12-07 19:24:32.127207+00:00
+[2025-12-07T19:24:58.620+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', '03_pipeline_boticario_final', 'transformacao_dbt', 'manual__2025-12-07T19:24:32.127207+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_ingestao.py', '--cfg-path', '/tmp/tmpq_nkpqsg']
+[2025-12-07T19:24:58.628+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask transformacao_dbt
+[2025-12-07T19:24:58.629+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=604) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-07T19:24:58.632+0000] {standard_task_runner.py:63} INFO - Started process 606 to run task
+[2025-12-07T19:24:58.929+0000] {task_command.py:426} INFO - Running <TaskInstance: 03_pipeline_boticario_final.transformacao_dbt manual__2025-12-07T19:24:32.127207+00:00 [running]> on host bb7fc5387fbc
+[2025-12-07T19:24:59.876+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_pipeline_boticario_final' AIRFLOW_CTX_TASK_ID='transformacao_dbt' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T19:24:32.127207+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T19:24:32.127207+00:00'
+[2025-12-07T19:24:59.893+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-07T19:25:00.061+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-07T19:25:00.077+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt run --project-dir /opt/***/dags/transformacao_dbt --profiles-dir /opt/***/dags/transformacao_dbt']
+[2025-12-07T19:25:00.200+0000] {subprocess.py:86} INFO - Output:
+[2025-12-07T19:25:18.829+0000] {subprocess.py:93} INFO - [0m19:25:18  Running with dbt=1.7.10
+[2025-12-07T19:25:24.185+0000] {subprocess.py:93} INFO - [0m19:25:24  Registered adapter: postgres=1.7.10
+[2025-12-07T19:25:26.573+0000] {subprocess.py:93} INFO - [0m19:25:26  Found 1 model, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[2025-12-07T19:25:26.719+0000] {subprocess.py:93} INFO - [0m19:25:26
+[2025-12-07T19:25:28.826+0000] {subprocess.py:93} INFO - [0m19:25:28  Concurrency: 1 threads (target='dev')
+[2025-12-07T19:25:28.842+0000] {subprocess.py:93} INFO - [0m19:25:28
+[2025-12-07T19:25:28.932+0000] {subprocess.py:93} INFO - [0m19:25:28  1 of 1 START sql table model public.vendas_analiticas .......................... [RUN]
+[2025-12-07T19:25:32.281+0000] {subprocess.py:93} INFO - [0m19:25:32  1 of 1 OK created sql table model public.vendas_analiticas ..................... [[32mSELECT 7[0m in 3.32s]
+[2025-12-07T19:25:32.543+0000] {subprocess.py:93} INFO - [0m19:25:32
+[2025-12-07T19:25:32.557+0000] {subprocess.py:93} INFO - [0m19:25:32  Finished running 1 table model in 0 hours 0 minutes and 5.80 seconds (5.80s).
+[2025-12-07T19:25:32.771+0000] {subprocess.py:93} INFO - [0m19:25:32
+[2025-12-07T19:25:32.794+0000] {subprocess.py:93} INFO - [0m19:25:32  [32mCompleted successfully[0m
+[2025-12-07T19:25:32.807+0000] {subprocess.py:93} INFO - [0m19:25:32
+[2025-12-07T19:25:32.823+0000] {subprocess.py:93} INFO - [0m19:25:32  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2025-12-07T19:25:36.050+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-07T19:25:36.082+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-07T19:25:36.287+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=03_pipeline_boticario_final, task_id=transformacao_dbt, run_id=manual__2025-12-07T19:24:32.127207+00:00, execution_date=20251207T192432, start_date=20251207T192458, end_date=20251207T192536
+[2025-12-07T19:25:36.579+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-07T19:25:36.676+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

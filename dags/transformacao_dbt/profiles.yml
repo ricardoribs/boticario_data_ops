@@ -1,0 +1,13 @@
+boticario_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      # Atenção: Aqui usamos 'postgres' porque é o nome do container, não localhost
+      host: postgres
+      port: 5432
+      user: airflow
+      pass: airflow
+      dbname: airflow
+      schema: public

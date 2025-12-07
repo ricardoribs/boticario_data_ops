@@ -1,0 +1,11 @@
+apache-airflow-providers-postgres
+apache-airflow-providers-amazon
+# Travando versões estáveis para não dar dor de cabeça
+dbt-core==1.7.10
+dbt-postgres==1.7.10
+pandas
+s3fs
+minio
+boto3
+# Essa linha abaixo é a cura para o seu erro
+psycopg2-binary

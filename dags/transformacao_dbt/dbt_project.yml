@@ -1,0 +1,19 @@
+name: 'projeto_boticario'
+version: '1.0.0'
+config-version: 2
+
+profile: 'boticario_profile'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  projeto_boticario:
+    # Isso diz que tudo que for criado vai virar uma Tabela no banco
+    +materialized: table

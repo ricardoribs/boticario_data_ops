@@ -1,0 +1,19 @@
+[2025-12-07T19:24:52.851+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-07T19:24:52.947+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_pipeline_boticario_final.ingestao_postgres manual__2025-12-07T19:24:32.127207+00:00 [queued]>
+[2025-12-07T19:24:53.111+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_pipeline_boticario_final.ingestao_postgres manual__2025-12-07T19:24:32.127207+00:00 [queued]>
+[2025-12-07T19:24:53.121+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-07T19:24:53.263+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): ingestao_postgres> on 2025-12-07 19:24:32.127207+00:00
+[2025-12-07T19:24:53.336+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', '03_pipeline_boticario_final', 'ingestao_postgres', 'manual__2025-12-07T19:24:32.127207+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_ingestao.py', '--cfg-path', '/tmp/tmpe8i31m72']
+[2025-12-07T19:24:53.349+0000] {standard_task_runner.py:91} INFO - Job 13: Subtask ingestao_postgres
+[2025-12-07T19:24:53.351+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=601) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-07T19:24:53.361+0000] {standard_task_runner.py:63} INFO - Started process 603 to run task
+[2025-12-07T19:24:53.948+0000] {task_command.py:426} INFO - Running <TaskInstance: 03_pipeline_boticario_final.ingestao_postgres manual__2025-12-07T19:24:32.127207+00:00 [running]> on host bb7fc5387fbc
+[2025-12-07T19:24:54.498+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_pipeline_boticario_final' AIRFLOW_CTX_TASK_ID='ingestao_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T19:24:32.127207+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T19:24:32.127207+00:00'
+[2025-12-07T19:24:54.502+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-07T19:24:54.617+0000] {base.py:84} INFO - Using connection ID '***_db' for task execution.
+[2025-12-07T19:24:54.896+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-12-07T19:24:54.899+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-07T19:24:54.944+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=03_pipeline_boticario_final, task_id=ingestao_postgres, run_id=manual__2025-12-07T19:24:32.127207+00:00, execution_date=20251207T192432, start_date=20251207T192452, end_date=20251207T192454
+[2025-12-07T19:24:55.026+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-07T19:24:55.085+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-07T19:24:55.093+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
