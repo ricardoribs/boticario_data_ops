@@ -45,12 +45,14 @@ graph LR
 
 🛠️ Decisões Técnicas (Tech Stack)
 
-Componente	Tecnologia	Por que escolhi?
-Orquestração	Apache Airflow	Para gerenciar dependências complexas e retries automáticos. O código é definido como DAGs (Python), facilitando versionamento.
-Data Lake	MinIO	        Simula o AWS S3 localmente. Permite desacoplar o armazenamento (barato) do processamento.
-Transformação	dbt Core	Traz as boas práticas de engenharia de software (testes, modularidade, git) para o SQL.
-Infraestrutura	Docker Compose	Garante que o ambiente seja reprodutível em qualquer máquina (Infrastructure as Code).
-Warehouse	PostgreSQL	Banco robusto para servir a camada analítica final.
+| **Componente**     | **Tecnologia** | **Por que escolhi?**                                                                     |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------- |
+| **Orquestração**   | Apache Airflow | Gerencia dependências complexas, retries automáticos e versionamento via DAGs em Python. |
+| **Data Lake**      | MinIO          | Simula S3 localmente e mantém o armazenamento desacoplado e barato.                      |
+| **Transformação**  | dbt Core       | Traz modularidade, testes e boas práticas de engenharia para SQL.                        |
+| **Infraestrutura** | Docker Compose | Ambiente 100% reprodutível, seguindo IaC.                                                |
+| **Warehouse**      | PostgreSQL     | Banco robusto e ideal para camadas analíticas.                                           |
+
 
 ⚙️ O Pipeline Detalhado
 O fluxo é controlado pela DAG 03_pipeline_boticario_final, que executa as seguintes etapas sequenciais:
@@ -72,12 +74,12 @@ O fluxo é controlado pela DAG 03_pipeline_boticario_final, que executa as segui
 1. Orquestração com Sucesso (Airflow)
 O pipeline completo rodando sem intervenção manual.
 
-![Fluxo Airflow](./airflow_graph.png)
+![Fluxo Airflow](https://github.com/ricardoribs/boticario_data_ops/blob/main/airflow_graph.png.PNG)
 
 2. Modelo de Dados Final (Analítico)
 A tabela final pronta para ser consumida por ferramentas de BI (Power BI/Metabase).
 
-![Terminal SQL](./resultado_final.png)
+![Terminal SQL](https://github.com/ricardoribs/boticario_data_ops/blob/main/resultado_final.png.PNG)
 
 📂 Estrutura do Repositório
 boticario_data_ops/
