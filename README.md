@@ -43,7 +43,7 @@ graph LR
     style E fill:#90ee90,stroke:#333
 
 
-🛠️ Decisões Técnicas (Tech Stack)
+## 🛠️ Decisões Técnicas (Tech Stack)
 
 | **Componente**     | **Tecnologia** | **Por que escolhi?**                                                                     |
 | ------------------ | -------------- | ---------------------------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ graph LR
 | **Warehouse**      | PostgreSQL     | Banco robusto e ideal para camadas analíticas.                                           |
 
 
-⚙️ O Pipeline Detalhado
+## ⚙️ O Pipeline Detalhado
 O fluxo é controlado pela DAG 03_pipeline_boticario_final, que executa as seguintes etapas sequenciais:
 
 1. Extract (Python): Simulação de geração de dados transacionais com variação de cenários (pedidos cancelados, atrasados, etc).
@@ -69,7 +69,7 @@ O fluxo é controlado pela DAG 03_pipeline_boticario_final, que executa as segui
 
  • Criação da flag teve_problema para monitoramento de SLA logístico.
 
-📸 Evidências
+## 📸 Evidências
 
 1. Orquestração com Sucesso (Airflow)
 O pipeline completo rodando sem intervenção manual.
@@ -81,19 +81,19 @@ A tabela final pronta para ser consumida por ferramentas de BI (Power BI/Metabas
 
 ![Terminal SQL](https://github.com/ricardoribs/boticario_data_ops/blob/main/resultado_final.png.PNG)
 
-📂 Estrutura do Repositório
+## 📂 Estrutura do Repositório
 boticario_data_ops/
 ├── dags/
-│   ├── transformacao_dbt/  # Projeto dbt isolado
-│   │   ├── models/         # Regras de negócio SQL
+│   ├── transformacao_dbt/        # Projeto dbt isolado
+│   │   ├── models/               # Regras de negócio (SQL)
 │   │   └── dbt_project.yml
-│   └── pipeline_ingestao.py # A DAG do Airflow
-├── data/                    # Persistência local do MinIO
-├── Dockerfile               # Customização da imagem Airflow
-├── docker-compose.yaml      # Orquestração dos containers
+│   └── pipeline_ingestao.py      # DAG principal do Airflow
+├── data/                         # Persistência local do MinIO
+├── Dockerfile                    # Customização da imagem do Airflow
+├── docker-compose.yaml           # Orquestração dos containers
 └── README.md
 
-🚀 Como Executar
+## 🚀 Como Executar
 Pré-requisitos: Docker e Docker Compose instalados.
 1. Clone o repositório:
 git clone [https://github.com/ricardoribs/boticario_data_ops.git](https://github.com/ricardoribs/boticario_data_ops.git)
