@@ -105,19 +105,29 @@ boticario_data_ops/
 ## 🚀 Como Executar
 Pré-requisitos: Docker e Docker Compose instalados.
 1. Clone o repositório:
+
 git clone https://github.com/ricardoribs/boticario_data_ops.git
 cd boticario_data_ops
 
 
+
 2. Suba o ambiente:
+
 docker-compose up -d --build
 
 3. Acesse as interfaces:
- | Serviço     | URL                                            | User         | Senha        |
-| ----------- | ---------------------------------------------- | ------------ | ------------ |
-| **Airflow** | [http://localhost:8080](http://localhost:8080) | `airflow`    | `airflow`    |
-| **MinIO**   | [http://localhost:9001](http://localhost:9001) | `minioadmin` | `minioadmin` |
 
+Airflow
+🔗 http://localhost:8080
+
+👤 User: airflow
+🔑 Pass: airflow
+
+MinIO
+🔗 http://localhost:9001
+
+👤 User: minioadmin
+🔑 Pass: minioadmin
 
 4. Execute: Ative a DAG 03_pipeline_boticario_final e acompanhe o fluxo ficar verde!
 
