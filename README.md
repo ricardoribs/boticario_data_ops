@@ -82,6 +82,7 @@ A tabela final pronta para ser consumida por ferramentas de BI (Power BI/Metabas
 ![Terminal SQL](https://github.com/ricardoribs/boticario_data_ops/blob/main/resultado_final.png.PNG)
 
 ## 📂 Estrutura do Repositório
+
 boticario_data_ops/
 ├── dags/
 │   ├── transformacao_dbt/        # Projeto dbt isolado
