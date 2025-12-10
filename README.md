@@ -22,6 +22,7 @@ O pipeline resolve o problema de **descentralização de dados**, ingerindo tran
 
 A solução segue a arquitetura de **Medalhão (Bronze, Silver, Gold)**, garantindo rastreabilidade e qualidade do dado.
 
+```mermaid
 graph LR
 
     subgraph Ingestao
@@ -41,7 +42,7 @@ graph LR
     style B fill:#add8e6,stroke:#333
     style D fill:#ff4500,color:white,stroke:#333
     style E fill:#90ee90,stroke:#333
-
+```
 
 ## 🛠️ Decisões Técnicas (Tech Stack)
 
