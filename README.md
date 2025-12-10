@@ -114,8 +114,8 @@ cd boticario_data_ops
 
 2. Suba o ambiente:
 
-```docker-compose up -d --build
-```
+```docker-compose up -d --build```
+
 
 3. Acesse as interfaces:
 
