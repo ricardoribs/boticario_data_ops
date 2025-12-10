@@ -107,15 +107,15 @@ boticario_data_ops/
 Pré-requisitos: Docker e Docker Compose instalados.
 1. Clone o repositório:
 
-git clone https://github.com/ricardoribs/boticario_data_ops.git
+```git clone https://github.com/ricardoribs/boticario_data_ops.git
 cd boticario_data_ops
-
+```
 
 
 2. Suba o ambiente:
 
-docker-compose up -d --build
-
+```docker-compose up -d --build
+```
 3. Acesse as interfaces:
 
 Airflow
