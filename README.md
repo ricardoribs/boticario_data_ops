@@ -116,6 +116,7 @@ cd boticario_data_ops
 
 ```docker-compose up -d --build
 ```
+
 3. Acesse as interfaces:
 
 Airflow
